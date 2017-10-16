@@ -1,0 +1,23 @@
+/*
+клиент хочет платить фиатом, взамен получает токены
+*/
+
+Сколько токенов купить? 
+<input type='text' value='' id='skok'>
+<input type='text' value='Выставить счет' onclick='requestInvoice(document.querySelector("#skok").val());'>
+
+<div id='result'></div>
+<script>
+
+DC.game = 'gamename';
+
+function requestInvoice(tokensRequested) {
+ 
+    DC.call("request",[tokensRequested],function(result){
+      if (result.fiatAmount) {
+        document.querySelector("#skok").val("Переведите по реквезитам сумму "+result.fiatAmount+" (обязательно с копейками). После перевода вам будут зачислены токены");
+      } 
+    });
+}
+
+</script>
