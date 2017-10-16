@@ -9,13 +9,13 @@
 <div id='result'></div>
 <script>
 
-DC.game = 'superExchange';
+DC.program = 'superExchange';
 
 function requestInvoice(tokensRequested) {
  
     DC.call("request",[tokensRequested],function(result){
       if (result.fiatAmount) {
-        document.querySelector("#skok").innerHTML = "Переведите по реквезитам сумму "+result.fiatAmount+" (обязательно с копейками). После перевода вам будут зачислены токены";
+        document.querySelector("#result").innerHTML = "Переведите по реквезитам сумму "+result.fiatAmount+" (обязательно с копейками). После перевода вам будут зачислены токены";
       } 
     });
 }
