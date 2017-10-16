@@ -4,18 +4,18 @@
 
 Сколько токенов купить? 
 <input type='text' value='' id='skok'>
-<input type='text' value='Выставить счет' onclick='requestInvoice(document.querySelector("#skok").val());'>
+<input type='text' value='Выставить счет' onclick='requestInvoice(document.querySelector("#skok").value);'>
 
 <div id='result'></div>
 <script>
 
-DC.game = 'gamename';
+DC.game = 'superExchange';
 
 function requestInvoice(tokensRequested) {
  
     DC.call("request",[tokensRequested],function(result){
       if (result.fiatAmount) {
-        document.querySelector("#skok").val("Переведите по реквезитам сумму "+result.fiatAmount+" (обязательно с копейками). После перевода вам будут зачислены токены");
+        document.querySelector("#skok").innerHTML = "Переведите по реквезитам сумму "+result.fiatAmount+" (обязательно с копейками). После перевода вам будут зачислены токены";
       } 
     });
 }
