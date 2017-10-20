@@ -1,0 +1,8 @@
+{
+	"name" : "Fiat to Erc",
+	"code" : "fiat2erc",
+
+	"run" : {
+		"client" : "backend.js"
+	}
+}
