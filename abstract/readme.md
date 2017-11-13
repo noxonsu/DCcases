@@ -1,3 +1,4 @@
+```
 //DApp LOGIC for use it in frontend and bankroller side
 DCLib.defineDAppLogic('game_monetka', function(){
   return {
@@ -30,3 +31,4 @@ App.connect({bankroller : "auto", paymentchannel:{deposit:100}}, function(connec
 function disconnect() {
 	App.disconnect();
 }
+```
