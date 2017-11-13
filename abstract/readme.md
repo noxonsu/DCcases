@@ -3,6 +3,8 @@
 2. отправляет запрос roll при этом передавая сид, из которого банкролер сделает рандом (подписав своим приватным ключем, см. signidice алгоритм)
 3. в зависимости от результата игры (1 выиграл, 0 проиграл) начисляет ставку в баланс на канале
 4. игрок может закрыть канал выполнив функцию disconnect()
+
+подробнее как запустить примеры см. https://github.com/noxonsu/DCcases
 ```
 //DApp LOGIC for use it in frontend and bankroller side
 DCLib.defineDAppLogic('game_monetka', function(){
